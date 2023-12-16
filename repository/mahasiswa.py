@@ -7,8 +7,19 @@ class MahasiswaRepo(MahasiswaAbstract):
         self.cursor = db.cursor
         self.conn = db.connection
 
-    def create_mahasiswa(self, mhs: MahasiswaEntity):
-        query = "INSERT INTO mahasiswa values (%s, %s, %s)"
+    def create_mahasiswa(self, mhs: MahasiswaEntity):  
+        query = "INSERT INTO mahasiswa values (%s, %s, %s)"    
         values =(mhs.nim, mhs.name, mhs.address)
         self.cursor.execute(query, values)
         self.conn.commit()
+
+    def delete_mahasiswa(self, nim: str):
+        query = "delete mahasiswa where nim= %s"   
+        values =(nim,)
+        self.cursor.execute(query, values)
+        self.conn.commit()        
+
+
+
+
+# repositori,logic,

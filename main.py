@@ -25,3 +25,4 @@ mhs = [
     MahasiswaEntity("1106069", "Robi", "Garut"),
     ]
 mhs_logic.creates(mhs)
+#mhs_logic.delete()
