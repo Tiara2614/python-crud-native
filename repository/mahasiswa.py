@@ -14,7 +14,7 @@ class MahasiswaRepo(MahasiswaAbstract):
         self.conn.commit()
 
     def delete_mahasiswa(self, nim: str):
-        query = "delete mahasiswa where nim= %s"   
+        query = "delete from mahasiswa where nim= %s"   
         values =(nim,)
         self.cursor.execute(query, values)
         self.conn.commit()        

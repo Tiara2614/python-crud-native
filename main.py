@@ -19,10 +19,10 @@ mhs_logic = MahasiswaLogic(repo=mhs_repo)
 
 # Usage
 mhs = [
-    MahasiswaEntity("1106050", "Gandana", "Garut"),
-    MahasiswaEntity("1106051", "Haris", "Garut"),
+    # MahasiswaEntity("1106050", "Gandana", "Garut"),
+    # MahasiswaEntity("1106051", "Haris", "Garut"),
     MahasiswaEntity("1106053", "Imam", "Garut"),
     MahasiswaEntity("1106069", "Robi", "Garut"),
     ]
 mhs_logic.creates(mhs)
-#mhs_logic.delete()
+mhs_logic.delete("1106051")
