@@ -14,3 +14,6 @@ class MahasiswaLogic:
 
     def delete(self, nim: str):
         self.repo.delete_mahasiswa(nim)
+
+    def update(self, nim: str , name, address):
+        self.repo.update_mahasiswa(nim,name,address)

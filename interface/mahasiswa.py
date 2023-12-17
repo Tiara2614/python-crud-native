@@ -7,3 +7,7 @@ class MahasiswaAbstract(ABC):
 
     def delete_mahasiswa(self, nim: str):
         ...
+
+    def update_mahasiswa(self, nim: str,name, address):
+        ...
+    

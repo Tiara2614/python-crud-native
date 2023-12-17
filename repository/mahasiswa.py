@@ -18,3 +18,9 @@ class MahasiswaRepo(MahasiswaAbstract):
         values =(nim,)
         self.cursor.execute(query, values)
         self.conn.commit()
+
+    def update_mahasiswa(self, nim,name,address: str):
+        query = "update mahasiswa set name = %s, address = %s where nim= %s"
+        values =(name,address,nim)
+        self.cursor.execute(query, values)
+        self.conn.commit()
